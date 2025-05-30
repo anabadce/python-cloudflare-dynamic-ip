@@ -10,7 +10,6 @@ CLOUDFLARE_ZONES = {
 
 CLOUDFLARE_RECORDS = [
     {
-        "id": "{record_id}",
         "zone_id": "{zone_id}",
         "name": "{record_name}",
         "proxied": False

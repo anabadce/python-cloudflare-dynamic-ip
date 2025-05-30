@@ -22,14 +22,7 @@ curl -X GET "https://api.cloudflare.com/client/v4/user/tokens/verify" \
 
 2. Get your DNS zone's ID from your dashboard. For more details, see https://developers.cloudflare.com/fundamentals/setup/find-account-and-zone-ids/.
 
-3. Get your DNS record's details using the API:
-
-    - Only records of type `A` (IPv4) are supported by this script.
-
-```shell
-curl -X GET "https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records" \
-     -H "Authorization: Bearer {token}"
-```
+3. Get your DNS record's details. Only records of type `A` (IPv4) are supported by this script.
 
 5. Copy the `config/config.sample.py` file to `config/config.py` and fill in the required information.
 
