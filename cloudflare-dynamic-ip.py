@@ -89,7 +89,7 @@ def get_current_ip() -> str:
     # force IPv4
     requests.packages.urllib3.util.connection.HAS_IPV6 = False
     
-    ip = requests.get(CURRENT_IP_API).text
+    ip = requests.get(CURRENT_IP_API).text.rstrip()
 
     logger.info("Current IP: {}".format(ip))
 
