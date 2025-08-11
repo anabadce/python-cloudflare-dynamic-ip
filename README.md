@@ -14,7 +14,7 @@ Documentation about updating a DNS record through Cloudflare API v4 is available
 
 ```bash
 python3 -m venv .venv
-source ./bin/activate
+source .venv/bin/activate
 ```
 
 - Custom domain domain and subdomain like `home.example.com`
