@@ -29,7 +29,7 @@ def update_record(record: dict, current_ip: str) -> bool:
     }
 
     # See:  https://api.cloudflare.com/#dns-records-for-a-zone-update-dns-record
-    url = "https://api.cloudflare.com/client/v4/zones/{}/dns_records".format(zone["id"])
+    url = "https://api.cloudflare.com/client/v4/zones/{}/dns_records".format(record["zone_id"])
 
     response = requests.get(url=url, headers=headers)
 
@@ -47,7 +47,7 @@ def update_record(record: dict, current_ip: str) -> bool:
         logger.error("Failed to read records in zone")
         return False
     
-    url = "https://api.cloudflare.com/client/v4/zones/{}/dns_records/{}".format(zone["id"], record_id["id"])
+    url = "https://api.cloudflare.com/client/v4/zones/{}/dns_records/{}".format(record["zone_id"], record_id["id"])
 
     response = requests.put(url=url, data=json.dumps(data), headers=headers)
 

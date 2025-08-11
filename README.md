@@ -8,6 +8,19 @@ Use this script as a template for managing dynamic IP addresses in Cloudflare DN
 
 Documentation about updating a DNS record through Cloudflare API v4 is available here: https://developers.cloudflare.com/api/operations/dns-records-for-a-zone-update-dns-record.
 
+## Requirements
+
+- python3, python3-venv, python3-pip
+
+```bash
+python3 -m venv .
+source ./bin/activate
+```
+
+- Custom domain domain and subdomain like `home.example.com`
+
+- Cloudflare account, `Free` plan or better.
+
 ## Installation
 
 1. Generate a token for the Cloudflare API. For mor details, see https://developers.cloudflare.com/fundamentals/api/get-started/create-token/.
@@ -42,7 +55,7 @@ It should generate a log file called `cloudflare-dynamic-ip.log` in the same dir
 
 ## Usage
 
-Run the script:
+Configure `config/config.py` and run:
 
 ```shell
 python cloudflare-dynamic-ip.py
@@ -50,7 +63,7 @@ python cloudflare-dynamic-ip.py
 
 ## Cron
 
-If you want to run the script programatically, you can use Cron jobs:
+If you want to run the script periodically, you can use Cron jobs:
 
 ```shell
 crontab -e
