@@ -13,7 +13,7 @@ Documentation about updating a DNS record through Cloudflare API v4 is available
 - python3, python3-venv, python3-pip
 
 ```bash
-python3 -m venv .
+python3 -m venv .venv
 source ./bin/activate
 ```
 
